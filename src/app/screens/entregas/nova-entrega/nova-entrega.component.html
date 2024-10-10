@@ -1,0 +1,137 @@
+<po-page-default p-title="Nova Entrega" [p-actions]="actions">
+    <form [formGroup]="entregaForm">
+        <po-divider class="po-md-12" p-label="Documento"></po-divider>
+
+        <div class="po-row">
+            <div class="po-md-6 po-sm-12">
+                <po-input
+                    p-label="Documento"
+                    name="documento"
+                    formControlName="documento"
+                    p-required
+                    [p-maxlength]="14"
+                    p-error-pattern="Máximo de 14 dígitos, sem espaços ou caracteres especiais"
+                    pattern="^[0-9]{1,14}$"
+                    required
+                >
+                </po-input>
+            </div>
+      </div>
+
+      <po-divider class="po-md-12" p-label="Origem"></po-divider>
+
+    <div class="po-row">
+        <div class="po-md-6 po-sm-12">
+            <po-input
+                p-label="Cliente Origem"
+                name="clienteOrigem"
+                formControlName="cliente_origem_nome"
+                p-required
+                required
+            >
+            </po-input>
+        </div>
+
+        <div class="po-md-6 po-sm-12">
+            <po-input
+                p-label="Endereço Origem"
+                name="enderecoOrigem"
+                formControlName="cliente_origem_endereco"
+                p-required
+                required
+            >
+            </po-input>
+        </div>
+      </div>
+
+      <div class="po-row">
+        <div class="po-md-6 po-sm-12">
+            <po-input
+                p-label="Bairro Origem"
+                name="bairroOrigem"
+                formControlName="cliente_origem_bairro"
+                p-required
+                required
+            >
+            </po-input>
+        </div>
+
+        <div class="po-md-6 po-sm-12">
+            <po-input
+                p-label="Cidade Origem"
+                name="cidadeOrigem"
+                formControlName="cliente_origem_cidade"
+                p-required
+                required
+            >
+            </po-input>
+        </div>
+      </div>
+
+      <po-divider class="po-md-12" p-label="Destino"></po-divider>
+
+      <div class="po-row">
+        <div class="po-md-6 po-sm-12">
+          <po-input
+                p-label="Cliente Destino"
+                name="clienteDestino"
+                formControlName="cliente_destino_nome"
+                p-required
+                required
+            >
+          </po-input>
+        </div>
+
+        <div class="po-md-6 po-sm-12">
+            <po-input
+                p-label="Endereço Destino"
+                name="enderecoDestino"
+                formControlName="cliente_destino_endereco"
+                p-required
+                required
+            >
+            </po-input>
+        </div>
+      </div>
+
+      <div class="po-row">
+        <div class="po-md-6 po-sm-12">
+            <po-input
+                p-label="Bairro Destino"
+                name="bairroDestino"
+                formControlName="cliente_destino_bairro"
+                p-required
+                required
+            >
+            </po-input>
+        </div>
+
+        <div class="po-md-6 po-sm-12">
+            <po-input
+                p-label="Cidade Destino"
+                name="cidadeDestino"
+                formControlName="cliente_destino_cidade"
+                p-required
+                required
+            >
+            </po-input>
+        </div>
+      </div>
+
+      <po-divider class="po-md-12" p-label="Motorista"></po-divider>
+
+      <div class="po-row">
+        <div class="po-md-6 po-sm-12">
+            <po-select
+                p-label="Motorista"
+                name="motorista"
+                formControlName="motorista_nome"
+                [p-options]="motoristaOptions"
+                p-required
+                required
+            >
+            </po-select>
+        </div>
+      </div>
+    </form>
+</po-page-default>

@@ -1,0 +1,49 @@
+<po-page-default p-title="Entregas" [p-actions]="actions">
+    <div class="po-row">
+      <div class="po-md-2 po-sm-12">
+        <po-select
+          name="pagination"
+          p-label="Página"
+          [p-options]="paginationOptions"
+          [ngModel]="currentPage"
+          (p-change)="onPageChange($event)"
+        >
+        </po-select>
+      </div>
+  
+      <div class="po-md-6  po-sm-12"></div> 
+
+      <div class="po-md-2 po-sm-12">
+        <po-select
+          name="motorista"
+          p-label="Filtrar por Motorista"
+          [p-options]="motoristaOptions"
+          [ngModel]="selectedMotorista"
+          (p-change)="onMotoristaChange($event)"
+        >
+        </po-select>
+      </div>
+  
+      <div class="po-md-2 po-sm-12">
+        <po-select
+          name="status"
+          p-label="Filtrar por Status"
+          [p-options]="statusOptions"
+          [ngModel]="selectedStatus"
+          (p-change)="onStatusChange($event)"
+        >
+        </po-select>
+      </div>
+    </div>
+  
+    <po-table
+      [p-columns]="columns"
+      [p-items]="paginatedEntregas"
+      p-striped="true"
+      p-sort="true"
+      [p-hide-columns-manager]="true"
+      [p-hide-table-search]="true"
+    >
+    </po-table>
+</po-page-default>
+  

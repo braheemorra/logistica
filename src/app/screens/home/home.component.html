@@ -1,0 +1,36 @@
+<po-page-default [p-title]="'Dashboard'">
+    <div class="po-row">
+        <div class="po-md-4 po-sm-12">
+            <po-widget p-title="Andamento de Entregas por Motorista">
+            <po-table
+                [p-items]="motoristaStats"
+                [p-columns]="motoristaColumns"
+                [p-hide-columns-manager]="true"
+            >
+            </po-table>
+            </po-widget>
+        </div>
+        
+        <div class="po-md-4 po-sm-12">
+            <po-widget p-title="Entregas Mal Sucedidas por Motorista">
+            <po-table
+                [p-items]="motoristaInsucessoStats"
+                [p-columns]="motoristaInsucessoColumns"
+                [p-hide-columns-manager]="true"
+            >
+            </po-table>
+            </po-widget>
+        </div>
+        
+        <div class="po-md-4 po-sm-12">
+            <po-widget p-title="Andamento de Entregas por Bairro">
+            <po-table
+                [p-items]="bairroStats"
+                [p-columns]="bairroColumns"
+                [p-hide-columns-manager]="true"
+            >
+            </po-table>
+            </po-widget>
+        </div>
+    </div>
+</po-page-default>

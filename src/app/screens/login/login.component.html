@@ -1,0 +1,11 @@
+<po-page-login
+    p-logo="assets/images/svg/logo_totvs.svg"
+    [p-loading]="isSubmitting"
+    (p-login-submit)="login($event)"
+    [p-product-name]="'Logística'"
+    [p-hide-remember-user]="true"
+    [p-literals]="{
+        loginPlaceholder: 'Insira seu usuário de acesso'
+    }"
+>
+</po-page-login>

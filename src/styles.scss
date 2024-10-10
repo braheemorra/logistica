@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+    --background-striped-color: rgb(241, 241, 241);
+    --line-height-md: 90%;
+}
+
+.po-field-container-title {
+    display: flex;
+    width: 100%;
+    min-height: 24px!important;
+    height: auto!important;
+}
+
+.po-field-container {
+    margin-top: 8px !important;
+}

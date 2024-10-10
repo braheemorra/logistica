@@ -1,0 +1,16 @@
+{
+    "enviroments": [
+        {
+            "name": "DESENVOLVIMENTO",
+            "protocol": "http",
+            "address": "localhost",
+            "port": "8071"
+        },
+        {
+            "name": "HOMOLOGAÇÃO",
+            "protocol": "http",
+            "address": "localhost",
+            "port": "8081"
+        }
+    ]
+}

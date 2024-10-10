@@ -1,0 +1,24 @@
+<section class="po-wrapper">
+    <po-toolbar
+        *ngIf="!hideMenu"
+        [p-title]="'Logística'"
+        [p-actions]="actions"
+        [p-actions-icon]="actionsIcon"
+        [p-profile-actions]="profileActions"
+    ></po-toolbar>
+
+    <po-menu
+        *ngIf="!hideMenu"
+        [p-collapsed]="true"
+        [p-filter]="true"
+        p-short-logo="assets/images/svg/totvs-short-logo-grey.svg"
+        p-logo="assets/images/svg/totvs-logo-grey.svg"
+        [p-menus]="menus"
+    ></po-menu>
+
+    <router-outlet></router-outlet>
+</section>
+
+<ng-template #loadingTemplate>
+    <po-loading-overlay p-text="Carregando..."></po-loading-overlay>
+</ng-template>
